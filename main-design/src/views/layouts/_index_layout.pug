@@ -1,0 +1,13 @@
+doctype html
+html(lang=`${locals.lang}` dir=`${(locals.lang === "en") ? "ltr" : "rtl"}`)
+	include ../partials/_head.pug
+	body
+		include ../sections/_preloader.pug
+		include ../sections/_header.pug
+		if locals.is_prod
+			include ../sections/_alerts_wrapper.pug
+		block variables
+		block content
+		include ../sections/_footer.pug
+		block modals
+		include ../partials/_foot.pug

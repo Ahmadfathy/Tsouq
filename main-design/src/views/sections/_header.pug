@@ -1,0 +1,55 @@
+.side-open
+nav.navbar
+	.navbar__top
+		.container
+			.row
+				.col-6
+					ul.navbar__social
+						li
+							a(href="#" target="_blank")
+								i.fab.fa-twitter
+						li
+							a(href="#" target="_blank")
+								i.fab.fa-linkedin-in
+						li
+							a(href="#" target="_blank")
+								i.fab.fa-instagram
+						li
+							a(href="#" target="_blank")
+								i.fab.fa-facebook-f
+				.col-6
+					ul.navbar__contacts
+						li
+							a(href="#" target="_blank")
+								small +696 873663525
+								i.fas.fa-phone
+						li
+							a(href="#" target="_blank")
+								small Info@tasweek.com
+								i.fas.fa-envelope
+	.navbar__main
+		.container
+			.row
+				.col-4.col-lg-2
+					a.navbar__logo(href="index.html", title=`${locals.sitename[locals.lang]}`)
+						img(src="./images/logo/logo-color.svg", alt=`${locals.sitename[locals.lang]}`)
+				.col-7.d-none.d-lg-flex
+					ul.navbar__pages
+						li
+							a.active(href="index.html") home
+						li
+							a(href="#") about us
+						li
+							a(href="#") business services
+						li
+							a(href="#") profissional services
+						li
+							a(href="#") medical services
+						li
+							a(href="#") contact us
+				.col-4.offset-4.col-lg-3.offset-lg-0
+					.navbar__login
+						a.btn.btn-primary.btn-sm.btn-block(href="login.html") login
+					//- i.menu-open.material-icons menu
+.overlay
+	i.menu-close.material-icons clear

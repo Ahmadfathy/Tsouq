@@ -1,0 +1,86 @@
+*{
+	&, &:before, &:after{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+html{
+	font-size: $font-size-base;
+	@include media-breakpoint-down(md) {
+		font-size: $font-size-sm;
+	}
+}
+body{
+	&.preloader-shown {
+		overflow: hidden;
+	}
+}
+
+
+.jarallax {
+	position: relative;
+	z-index: 0;
+
+	&-img {
+		position: absolute;
+		object-fit: cover;
+		/* support for plugin https://github.com/bfred-it/object-fit-images */
+		font-family: 'object-fit: cover;';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.3;
+	}
+}
+
+.input-group-prepend {
+	& + .form-control{
+		border-left: 0;
+	}
+}
+
+.input-group-append {
+	&.show-password {
+		&, &> .input-group-text {
+			cursor: pointer;
+			background-color: $white;
+			color: $primary;
+			border-color: $input-border-color;
+			border-left: 0;
+		}
+	}
+}
+
+.modal{
+	&-header{
+		text-align: center;
+		color: $primary;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	&-title{
+		text-align: center;
+	}
+
+	.close {
+		margin: 0;
+		position: absolute;
+		right: -15px;
+		top: -15px;
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		background-color: $primary;
+		color: $white;
+		font-weight: $font-weight-light;
+		border-radius: 50%;
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		opacity: 1 !important;
+	}
+}

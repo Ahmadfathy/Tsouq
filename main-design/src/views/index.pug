@@ -1,0 +1,265 @@
+extends ./layouts/_index_layout.pug
+include ./mixins/_product_card.pug
+include ./mixins/_person_card.pug
+
+block variables
+	- var products = [{img: './images/products/product-1.jpg', title: 'lorem ipum dolor.', desc: 'lorem ipum dolor.', price: 1110, rating:'2.5'}, {img: './images/products/product-2.jpg', title: 'lorem ipum dolor.', desc: 'lorem ipum dolor.', price: 1110, rating:'2.5'}, {img: './images/products/product-1.jpg', title: 'lorem ipum dolor.', desc: 'lorem ipum dolor.', price: 1110, rating:'2.5'}, {img: './images/products/product-2.jpg', title: 'lorem ipum dolor.', desc: 'lorem ipum dolor.', price: 1110, rating:'2.5'}]
+	- var doctors = [{img: './images/avatars/doc-1.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}, {img: './images/avatars/doc-2.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}, {img: './images/avatars/doc-3.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}, {img: './images/avatars/doc-4.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}]
+	- var profissionals = [{img: './images/avatars/doc-1.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}, {img: './images/avatars/doc-2.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}, {img: './images/avatars/doc-3.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}, {img: './images/avatars/doc-4.jpg', name:'dr/ Mohamed ashraf', desc: 'lorem ipum dolor.', rating: '1.5', address:'Road 9 Maadi, Cairo, Egypt.'}]
+
+
+block content
+	main#home-main(role="main")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide.jarallax
+					img.jarallax-img(src="./images/backgrounds/bg-1.jpg")
+					.container
+						.row
+							.col-10.offset-1.col-sm-8.offset-sm-2.col-lg-6.offset-lg-3
+								h1(data-swiper-parallax="-100", data-swiper-parallax-opacity="0.4") Maintenance of household appliances now
+								p(data-swiper-parallax="-200", data-swiper-parallax-opacity="0.2") You can now ask technicians to repair all home malfunctions
+								a.btn.btn-white.px-5.text-primary.text-capitalize(href="#") order now
+				.swiper-slide.jarallax
+					img.jarallax-img(src="./images/backgrounds/bg-2.jpg")
+					.container
+						.row
+							.col-10.offset-1.col-sm-8.offset-sm-2.col-lg-6.offset-lg-3
+								h1(data-swiper-parallax="-100", data-swiper-parallax-opacity="0.4") Maintenance of household appliances now
+								p(data-swiper-parallax="-200", data-swiper-parallax-opacity="0.2") You can now ask technicians to repair all home malfunctions
+								a.btn.btn-white.px-5.text-primary.text-capitalize(href="#") order now
+				.swiper-slide.jarallax
+					img.jarallax-img(src="./images/backgrounds/bg-1.jpg")
+					.container
+						.row
+							.col-10.offset-1.col-sm-8.offset-sm-2.col-lg-6.offset-lg-3
+								h1(data-swiper-parallax="-100", data-swiper-parallax-opacity="0.4") Maintenance of household appliances now
+								p(data-swiper-parallax="-200", data-swiper-parallax-opacity="0.2") You can now ask technicians to repair all home malfunctions
+								a.btn.btn-white.px-5.text-primary.text-capitalize(href="#") order now
+				.swiper-slide.jarallax
+					img.jarallax-img(src="./images/backgrounds/bg-2.jpg")
+					.container
+						.row
+							.col-10.offset-1.col-sm-8.offset-sm-2.col-lg-6.offset-lg-3
+								h1(data-swiper-parallax="-100", data-swiper-parallax-opacity="0.4") Maintenance of household appliances now
+								p(data-swiper-parallax="-200", data-swiper-parallax-opacity="0.2") You can now ask technicians to repair all home malfunctions
+								a.btn.btn-white.px-5.text-primary.text-capitalize(href="#") order now
+			.swiper-pagination
+			.swiper-button-next
+			.swiper-button-prev
+	section#home-search
+		.container
+			.row
+				.col-10.offset-1.col-md-8.offset-md-2
+					.card-search.shadow-sm
+						.card-body
+							form.form-inline(action="#", metho="POST")
+								.form-row.w-100
+									.input-group.input-group-lg.col-12.col-md-5
+										.input-group-prepend
+											span.input-group-text.icon-placeholder#choose-country
+										input.form-control(type='text', placeholder='Choose Country.', aria-label="search using country" aria-describedby="choose-country")
+									.input-group.input-group-lg.col-12.col-md-4
+										input.form-control.w-100(type='text', aria-describedby="choose-city", aria-label="search using city", placeholder='Choose City.')
+									.input-group.col-12.col-md-3
+										button.btn.btn-primary.btn-block.text-capitalize(type='submit') see results
+	section#home-all-services
+		.container
+			.row
+				.col-12.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+					ul#home-services-tabs.nav.nav-pills.mb-3(role='tablist')
+						li.nav-item
+							a#pills-profissionals-service-tab.nav-link.active(data-toggle='pill', href='#pills-profissionals-service', role='tab', aria-controls='pills-profissionals-service', aria-selected='true') profissionals service
+						li.nav-item
+							a#pills-medical-service-tab.nav-link(data-toggle='pill', href='#pills-medical-service', role='tab', aria-controls='pills-medical-service', aria-selected='false') medical service
+						li.nav-item
+							a#pills-products-service-tab.nav-link(data-toggle='pill', href='#pills-products-service', role='tab', aria-controls='pills-products-service', aria-selected='false') products service
+				.col-12.mt-4
+					#home-services-tabsContent.tab-content
+						#pills-profissionals-service.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-profissionals-service-tab')
+							.swiper-container.services-tab-slider
+								.swiper-wrapper
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-air-condition
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-enginnering
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-carpenter
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-plumber
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-furnature
+											| Lorem, ipsum.
+								.swiper-button-next
+									i.fas.fa-arrow-right
+								.swiper-button-prev
+									i.fas.fa-arrow-left
+						#pills-medical-service.tab-pane.fade(role='tabpanel', aria-labelledby='pills-medical-service-tab')
+							.swiper-container.services-tab-slider
+								.swiper-wrapper
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-air-condition
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-enginnering
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-carpenter
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-plumber
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-furnature
+											| Lorem, ipsum.
+								.swiper-button-next
+									i.fas.fa-arrow-right
+								.swiper-button-prev
+									i.fas.fa-arrow-left
+						#pills-products-service.tab-pane.fade(role='tabpanel', aria-labelledby='pills-products-service-tab')
+							.swiper-container.services-tab-slider
+								.swiper-wrapper
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-air-condition
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-enginnering
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-carpenter
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-plumber
+											| Lorem, ipsum.
+									.swiper-slide
+										a.service-icon-card(href="#")
+											i.icon-furnature
+											| Lorem, ipsum.
+								.swiper-button-next
+									i.fas.fa-arrow-right
+								.swiper-button-prev
+									i.fas.fa-arrow-left
+
+	section#home-products.home__service
+		.container
+			.row
+				.col-12
+					.home__service--header
+						h5 latest products
+						a(href="#", title="see more products") more
+				.col-12
+					.home__service--content
+						.row
+							each prod, index in products
+								.col-12.col-sm-6.col-md-4.col-lg-3.mb-5
+									+product_card(prod, index)
+	section#home-choose-doctors.home__service.home__service--bg-blue
+		.container
+			.row
+				.col-12
+					.home__service--header
+						h5 choose your doctor
+						a(href="#", title="see more products") more
+				.col-12
+					.home__service--content
+						.row
+							each doc, index in doctors
+								.col-12.col-sm-6.col-md-4.col-lg-3.mb-5
+									+person_card(doc, index)
+
+	section#home-choose-profissionals.home__service.home__service--bg-transparent
+		.container
+			.row
+				.col-12
+					.home__service--header
+						h5 best profissionals
+						a(href="#", title="see more products") more
+				.col-12
+					.home__service--content
+						.row
+							each prof, index in profissionals
+								.col-12.col-sm-6.col-md-4.col-lg-3.mb-5
+									+person_card(prof, index)
+	section#home-testimonials.home__service
+		.container
+			.row
+				.col-12
+					.home__service--header
+						h5 testimonials
+						a(href="#", title="see more products") more
+				.col-12
+					.home__service--content
+						.row
+							.col-12.col-md-6.mb-4
+								.card-testimonials
+									.row
+										.col-3.pr-0
+											.card-img
+												img.img-fluid(src="./images/avatars/avatar-1.jpg", alt="some description")
+										.col-9.pl-0
+											.card-body
+												h6.card-title Lorem, ipsum dolor.
+												small.card-subtitle Lorem, ipsum dolor.
+												p.card-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid eos ad magni asperiores tempore voluptas distinctio quo magnam laborum molestiae.
+							.col-12.col-md-6.mb-4
+								.card-testimonials
+									.row
+										.col-3.pr-0
+											.card-img
+												img.img-fluid(src="./images/avatars/avatar-1.jpg", alt="some description")
+										.col-9.pl-0
+											.card-body
+												h6.card-title Lorem, ipsum dolor.
+												small.card-subtitle Lorem, ipsum dolor.
+												p.card-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid eos ad magni asperiores tempore voluptas distinctio quo magnam laborum molestiae.
+	section#home-download-app.jarallax
+		img.jarallax-img(src="./images/backgrounds/bg-2.jpg")
+		.container
+			.row
+				.col-12.col-md-6
+					h5 download the app
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi, iste corrupti harum error quis, fuga delectus nostrum aut enim velit doloribus itaque magni minus ratione eveniet deleniti aperiam repellendus.
+					.stores-container
+						a(href="#" title="download from play store" target="_blank")
+							img(src="./images/icons/play-store.png", alt="")
+						a(href="#" title="download from app store" target="_blank")
+							img(src="./images/icons/app-store.png", alt="")
+	section#home-partners.partners
+		.container
+			.row
+				.col-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.my-2
+					a.partners__logo(href="#")
+						img(src="https://via.placeholder.com/160x75.png/F9F9F9/878787?text=logo", alt="partiner logo")
+				.col-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.my-2
+					a.partners__logo(href="#")
+						img(src="https://via.placeholder.com/160x75.png/F9F9F9/878787?text=logo", alt="partiner logo")
+				.col-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.my-2
+					a.partners__logo(href="#")
+						img(src="https://via.placeholder.com/160x75.png/F9F9F9/878787?text=logo", alt="partiner logo")
+				.col-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.my-2
+					a.partners__logo(href="#")
+						img(src="https://via.placeholder.com/160x75.png/F9F9F9/878787?text=logo", alt="partiner logo")
+				.col-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.my-2
+					a.partners__logo(href="#")
+						img(src="https://via.placeholder.com/160x75.png/F9F9F9/878787?text=logo", alt="partiner logo")
+				.col-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.my-2
+					a.partners__logo(href="#")
+						img(src="https://via.placeholder.com/160x75.png/F9F9F9/878787?text=logo", alt="partiner logo")

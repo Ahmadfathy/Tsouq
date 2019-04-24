@@ -1,0 +1,254 @@
+//*********************************  Body Overlay  *********************************//
+.side-open {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	height: 100%;
+	z-index: $zindex-overlay-menu-backdrop;
+	display: none;
+	background-color: rgba($gray-800, 0.6);
+	cursor: pointer;
+}
+
+.menu-open{
+	cursor: pointer;
+	font-size: 2rem;
+}
+//*********************************  sideBar  *********************************//
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: $zindex-overlay-menu;
+	background-color: $dark;
+	min-height: 100vh;
+	width: 30%;
+	padding: $grid-gutter-width/2;
+	box-shadow: $box-shadow;
+
+	&:not(.open) {
+		display: none;
+	}
+
+	&.open {
+		overflow-y: scroll;
+		height: 100%;
+
+		/* scroll bar width */
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+	}
+
+	.menu-close {
+		position: absolute;
+		top: $grid-gutter-width/2;
+		left: $grid-gutter-width/2;
+		font-size: 1.5rem;
+		color: $white;
+		cursor: pointer;
+		z-index: $zindex-overlay-close;
+	}
+
+
+	@include media-breakpoint-down(md) {
+		width: 50%;
+	}
+
+	@include media-breakpoint-down(xs) {
+		width: 100%;
+	}
+
+	@media screen and (max-height: 700px) {
+		height: 100%;
+		overflow-y: scroll;
+	}
+}
+
+
+//*********************************  navbar  *********************************//
+.navbar{
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $zindex-fixed;
+	width: 100%;
+	&.scrolling{
+		box-shadow: $box-shadow-sm;
+		transition: $transition-base-slower;
+		.navbar__top {
+			display: none;
+			transition: $transition-base;
+		}
+
+		.navbar__main {
+			padding: 10px 0;
+			transition: $transition-base;
+		}
+
+		.navbar__logo {
+			width: 75%;
+			transition: $transition-base-slow;
+		}
+	}
+	&__top,
+	&__main {
+		width: 100%;
+		transition: $transition-base-slow;
+	}
+	&__top{
+		background-color: $blue-dark;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		&>.container{
+			&>.row{
+				&>div[class*="col-"]{
+					display: flex;
+					align-content: center;
+					&:first-child{justify-content: flex-start;}
+					&:last-child{justify-content: flex-end;}
+				}
+			}
+		}
+	}
+
+	&__main{
+		background-color: $white;
+		padding: 20px 0 ;
+	}
+	&__pages{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0;
+		height: 100%;
+		width: 100%;
+
+		li{
+			list-style: none;
+			overflow: hidden;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			a{
+				text-align: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
+				font-family: inherit;
+				font-weight: $font-weight-normal;
+				font-size: $font-size-sm;
+				text-align: left;
+				transition: $transition-base;
+				text-transform: capitalize;
+				color: $gray-500;
+
+				&:before{
+					content: '';
+					width: 100%;
+					height: $border-width * 3;
+					background-color: $primary;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					opacity: 0;
+					transform: translateY(100%);
+				}
+
+				&.active, &:hover{
+					color: $primary;
+					text-decoration: none;
+					&:before{
+						transition: $transition-base;
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+
+			}
+		}
+	}
+
+	&__login{
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo{
+		width: 100%;
+		height: 100%;
+		display: block;
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+
+	&__social, &__contacts{
+		display: flex;
+		align-items: center;
+		margin: 0;
+
+		li {
+			list-style: none;
+			a{
+				transition: $transition-base;
+				color: $white;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				i{
+					color: $link-color;
+					transition: $transition-base;
+				}
+				@include hover{
+					text-decoration: none;
+					i{color: $white;}
+				}
+			}
+		}
+	}
+
+	&__social{
+		li{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: rgba($white, 0.15);
+			&:not(:last-child) {margin-right: 1rem;}
+			font-size: $font-size-sm;
+		}
+
+		@include media-breakpoint-down(sm) {
+			li{
+				&:not(:last-child) {margin-right: 0.75rem;}
+			}
+		}
+	}
+
+	&__contacts{
+		li{
+			&:not(:last-child) {margin-right: 2rem;}
+			a{
+				i{
+					margin-left:0.5rem;
+				}
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+			li{
+				&:not(:last-child) {margin-bottom: 1rem;margin-right: initial;}
+			}
+		}
+	}
+}

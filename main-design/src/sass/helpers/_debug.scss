@@ -1,0 +1,21 @@
+@if $enable-debug==true {
+	*:not(path):not(g) {
+		color: rgba($white, 0.9) !important;
+		background: rgba($yellow, 0.5) !important;
+		outline: solid $border-width * 4 rgba($white, 0.5) !important;
+		box-shadow: none !important;
+		border-color: rgba($white, 0.9) !important;
+
+		&::after,
+		&::before {
+			background-color: rgba($yellow, 0.5) !important;
+			color: rgba($white, 0.9) !important;
+			border-color: rgba($white, 0.9) !important;
+		}
+	}
+
+	* path,
+	* g {
+		stroke-width: $border-width * 4;
+	}
+}

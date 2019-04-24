@@ -1,0 +1,109 @@
+.inner{
+
+	&__wrapper{}
+
+	&__header{
+		padding-top: calc(10rem + 3rem); // navbar's height + .inner__header padding.
+		padding-bottom: 5rem;
+		background-color: $primary;
+		color: $white;
+		text-align: center;
+		font-family: inherit;
+	}
+
+	&__content{
+		padding: 9rem 0;
+		background-color: $white;
+		font-family: inherit;
+	}
+
+	&__title{
+		font-weight: $font-weight-bold;
+		color: $white;
+		font-family: inherit;
+		text-transform: capitalize;
+	}
+
+	&__card{
+		@extend .card;
+		margin-top: -180px;
+		&>div{
+			background-color: inherit;
+			&:first-child {
+				@include border-top-radius($card-border-radius);
+			}
+			&:last-child {
+				@include border-bottom-radius($card-border-radius);
+			}
+		}
+		.card{
+			&-header{
+				text-align: center;
+				img{
+					width: 100px;
+					height: 100px;
+					object-fit: scale-down;
+					object-position: center center;
+				}
+			}
+			&-body{
+				p {
+					font-family: inherit;
+					font-weight: $font-weight-light;
+					font-size: $font-size-base;
+				}
+			}
+			&-footer{
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				position: relative;
+
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					height: $border-width;
+					width: 100% ;
+					background-color: rgba($border-color, 0.5);
+				}
+
+				.btn{
+					text-decoration: none;
+					margin: 0;
+					font-size: $font-size-sm;
+					font-family: inherit;
+					font-weight: $font-weight-bold;
+					text-transform: capitalize;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					span, i{
+						font-size: $font-size-base * 1.5;
+						font-weight: $font-weight-normal;
+						margin-right: 1rem;
+						&, &:before{color: inherit;}
+					}
+
+					&:not(:last-child) {
+						position: relative;
+						&:after{
+							content: '';
+							position: absolute;
+							top: 50%;
+							right: 0;
+							transform: translateY(-50%);
+							height: calc(100% + #{$card-spacer-y * 2});
+							width: $border-width;
+							background-color: rgba($border-color, 0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

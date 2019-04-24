@@ -1,0 +1,190 @@
+@font-face {
+	 font-family: 'icomoon';
+	 src: url('../fonts/icomoon.eot?eej9ip');
+	 src: url('../fonts/icomoon.eot?eej9ip#iefix') format('embedded-opentype'),
+	 url('../fonts/icomoon.ttf?eej9ip') format('truetype'),
+	 url('../fonts/icomoon.woff?eej9ip') format('woff'),
+	 url('../fonts/icomoon.svg?eej9ip#icomoon') format('svg');
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: $font-size-lg;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-air-condition:before {
+	content: "\e900";
+	color: inherit;
+}
+
+.icon-arrow-lg-left:before {
+	content: "\e901";
+	color: inherit;
+}
+
+.icon-arrow-lg-right:before {
+	content: "\e902";
+	color: inherit;
+}
+
+.icon-arrow-sm-left:before {
+	content: "\e903";
+	color: inherit;
+}
+
+.icon-arrow-sm-right:before {
+	content: "\e904";
+	color: inherit;
+}
+
+.icon-black-back-closed-envelope-shape:before {
+	content: "\e905";
+	color: inherit;
+}
+
+.icon-calendar:before {
+	content: "\e906";
+	color: inherit;
+}
+
+.icon-call-answer:before {
+	content: "\e907";
+	color: inherit;
+}
+
+.icon-carpenter:before {
+	content: "\e908";
+	color: inherit;
+}
+
+.icon-cleaning:before {
+	content: "\e909";
+	color: inherit;
+}
+
+.icon-envelope:before {
+	content: "\e90a";
+	color: inherit;
+}
+
+.icon-consultation:before {
+	content: "\e90b";
+	color: inherit;
+}
+
+.icon-doctor:before {
+	content: "\e90c";
+	color: inherit;
+}
+
+.icon-enginnering:before {
+	content: "\e90d";
+	color: inherit;
+}
+
+.icon-facebook:before {
+	content: "\e94b";
+	color: inherit;
+}
+
+.icon-furnature:before {
+	content: "\e90e";
+	color: inherit;
+}
+
+.icon-gmail .path1:before {
+	content: "\e94e";
+	color: rgb(236, 239, 241);
+}
+
+.icon-gmail .path2:before {
+	content: "\e94f";
+	margin-left: -1.3330078125em;
+	color: rgb(207, 216, 220);
+}
+
+.icon-gmail .path3:before {
+	content: "\e950";
+	margin-left: -1.3330078125em;
+	color: rgb(244, 67, 54);
+}
+
+.icon-key:before {
+	content: "\e90f";
+	color: inherit;
+}
+
+.icon-male-user:before {
+	content: "\e910";
+	color: inherit;
+}
+
+.icon-maps-pin:before {
+	content: "\e911";
+	color: inherit;
+}
+
+.icon-medical:before {
+	content: "\e912";
+	color: inherit;
+}
+
+.icon-money-bag:before {
+	content: "\e913";
+	color: inherit;
+}
+
+.icon-online-shop:before {
+	content: "\e914";
+	color: inherit;
+}
+
+.icon-placeholder:before {
+	content: "\e915";
+	color: inherit;
+}
+
+.icon-plumber:before {
+	content: "\e916";
+	color: inherit;
+}
+
+.icon-service:before {
+	content: "\e917";
+	color: inherit;
+}
+
+.icon-shop-cart-logo:before {
+	content: "\e9aa";
+	color: #fecb00;
+}
+
+.icon-twitter:before {
+	content: "\e9c5";
+	color: inherit;
+}
+
+.icon-user:before {
+	content: "\e918";
+	color: inherit;
+}
+
+.icon-worker:before {
+	content: "\e919";
+	color: inherit;
+}

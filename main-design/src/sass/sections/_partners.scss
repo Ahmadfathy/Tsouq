@@ -1,0 +1,14 @@
+.partners{
+	background-color: $light;
+	padding: 2rem 0;
+	&__logo {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: $transition-base;
+		img{@extend .img-fluid;}
+		@include hover{transform: scale(1.2);}
+	}
+}

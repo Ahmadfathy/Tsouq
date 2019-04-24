@@ -1,0 +1,19 @@
+mixin product_card(data={}, index=0)
+	.card-product
+		img.card-img-top(src=`${data.img}`, alt='product image')
+		.card-body
+			div
+				a.card-title.h6(href="#" title="product")= `${data.title}`
+				small.card-text= `${data.desc}`
+			div
+				p.price= `${data.price} LE`
+				select.stars-readOnly(data-init=`${data.rating}`)
+					option(value='1') 1
+					option(value='2') 2
+					option(value='3') 3
+					option(value='4') 4
+					option(value='5') 5
+		.card-footer
+			a.btn.btn-primary.btn-block(href="#" title="add to wishlist")
+				| add to cart
+				i.fas.fa-plus

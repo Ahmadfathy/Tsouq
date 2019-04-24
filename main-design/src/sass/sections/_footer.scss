@@ -1,0 +1,118 @@
+.footer{
+	background-color: $dark;
+	color: $white;
+	padding: 4.6875rem 0;
+	p {
+		font-size: $font-size-sm;
+		font-weight: $font-weight-light;
+		font-family: inherit;
+	}
+	&__logo {
+		width: 50%;
+		height: auto;
+		display: block;
+		margin-bottom: $spacer * 2;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&__social{
+		display: flex;
+		align-items: center;
+		margin: 0;
+
+		li {
+			list-style: none;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background-color: rgba($white, 0.15);
+			font-size: $font-size-sm;
+
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+
+
+			a {
+				transition: $transition-base;
+				color: $white;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				i {
+					color: $link-color;
+					transition: $transition-base;
+				}
+
+				@include hover {
+					text-decoration: none;
+
+					i {
+						color: $white;
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			li {
+				&:not(:last-child) {
+					margin-right: 0.75rem;
+				}
+			}
+		}
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: flex-start;
+		@include media-breakpoint-down(sm) {
+			margin-top: $spacer * 3;
+		}
+		&-title{
+			color: $white;
+			position: relative;
+			padding-bottom: $spacer / 2;
+			font-family: inherit;
+			font-weight: $font-weight-bold !important;
+			font-size: $font-size-base !important;
+			text-transform: capitalize;
+			margin-bottom: $spacer  * 2;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				height: $border-width;
+				background-color: $white;
+				width: 90px;
+				min-width: 25%;
+			}
+		}
+		&-list{
+			li{
+				list-style: none;
+				text-transform: capitalize;
+				font-size: $font-size-sm;
+				text-transform: capitalize;
+				font-family: inherit;
+				&:not(:last-child) {margin-bottom: $spacer / 2;}
+				a{
+					color: rgba($white, 0.7);
+					transition: $transition-base;
+					@include hover{
+						text-decoration: none;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}

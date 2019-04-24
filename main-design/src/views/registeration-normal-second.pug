@@ -1,0 +1,29 @@
+extends ./layouts/_index_layout.pug
+
+
+block variables
+	- var page_title = "new account";
+
+block content
+	.inner#login-page
+		.inner__wrapper
+			header.inner__header.jarallax
+				img.jarallax-img(src="./images/backgrounds/bg-1.jpg")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							h2.inner__title= `${page_title}`
+			main.inner__content(role="main")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							.inner__card.shadow-sm
+								.card-body
+									.container
+										.row
+											.col-8.offset-2.text-center.my-4
+												img(src="./images/icons/shopping-basket (2).svg", alt="")
+											.col-8.offset-2.text-center.my-4
+												p Welcome to the Tsuoq.com community where you can browse many products and services and offer the closest to you and browse it easily and ask what you want.
+											.col-8.offset-2.text-center.my-4
+												a.btn.btn-primary.btn-block.btn-lg.text-capitalize(href="#") Add the service

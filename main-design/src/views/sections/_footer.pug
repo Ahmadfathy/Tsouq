@@ -1,0 +1,62 @@
+footer.footer
+	.container
+		.row
+			.col-12.col-md-3
+				a.footer__logo(href="index.html", title=`${locals.sitename[locals.lang]}`)
+					img(src="./images/logo/logo-white.svg", alt=`${locals.sitename[locals.lang]}`)
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit perferendis numquam quia pariatur ullam autem corporis possimus, sunt eos nisi nobis voluptates illum quas iure nesciunt? In minus vel officia.
+				ul.footer__social
+					li
+						a(href="#" target="_blank")
+							i.fab.fa-twitter
+					li
+						a(href="#" target="_blank")
+							i.fab.fa-linkedin-in
+					li
+						a(href="#" target="_blank")
+							i.fab.fa-instagram
+					li
+						a(href="#" target="_blank")
+							i.fab.fa-facebook-f
+			.col-6.col-md-3
+				.footer__content
+					p.footer__content-title site map
+					ul.footer__content-list
+						li.footer__content-single
+							a(href="#") home
+						li.footer__content-single
+							a(href="#") about us
+						li.footer__content-single
+							a(href="#") business services
+						li.footer__content-single
+							a(href="#") profissional services
+						li.footer__content-single
+							a(href="#") medical services
+						li.footer__content-single
+							a(href="#") contact us
+			.col-6.col-md-3
+				.footer__content
+					p.footer__content-title services
+					ul.footer__content-list
+						li.footer__content-single
+							a(href="#") plumbers
+						li.footer__content-single
+							a(href="#") carpenters
+						li.footer__content-single
+							a(href="#") upholstered
+						li.footer__content-single
+							a(href="#") dentists
+						li.footer__content-single
+							a(href="#") children doctors
+						li.footer__content-single
+							a(href="#") car fixing
+			.col-12.col-md-3
+				.footer__content
+					p.footer__content-title newsletter
+					.footer__content-form
+						form(action="#" method="POST")
+							.form-row
+								.col-12.mb-2
+									input.form-control.rounded-0(type="email", name="", placeholder="Email Address")
+								.col-12.d-flex.justify-content-end
+									button.btn.btn-primary(type="submit") subscribe now

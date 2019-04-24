@@ -1,0 +1,59 @@
+/*
+**		GOOGLE FONTS
+** ==============================================
+*/
+@import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/*
+**		LIBERARIES
+** ==============================================
+*/
+@import 'libs/bootstrap/bootstrap';
+@import 'libs/fontawesome/fontawesome';
+@import 'libs/material-icons/material_icons';
+@import 'libs/swiper/swiper';
+@import 'libs/animate-css/animate';
+@import 'libs/bar-rating/jquery_bar_rating';
+@import 'libs/flat-pickr/flatpicker';
+
+/*
+**		HELPERS
+** ==============================================
+*/
+@import 'helpers/debug';
+@import 'helpers/mixins';
+@import 'helpers/helper_classes';
+
+/*
+**		COMPONENTS
+** ==============================================
+*/
+@import 'components/cards';
+@import 'components/iconmon_icons';
+@import 'components/badges';
+@import 'components/profile_avatar';
+
+/*
+**		SECTIONS
+** ==============================================
+*/
+@import 'sections/preloader';
+@import 'sections/side_nav';
+@import 'sections/footer';
+@import 'sections/alerts_wrapper';
+@import 'sections/home_service';
+@import 'sections/partners';
+
+/*
+**		PAGES
+** ==============================================
+*/
+@import 'pages/index.scss';
+@import 'pages/about.scss';
+@import 'pages/inner_pages';
+
+/*
+**		OVERWRITING STYLE
+** ==============================================
+*/
+@import 'custom_style';

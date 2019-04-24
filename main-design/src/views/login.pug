@@ -1,0 +1,110 @@
+extends ./layouts/_index_layout.pug
+
+
+block variables
+	- var page_title = "Login";
+
+
+block content
+	.inner#login-page
+		.inner__wrapper
+			header.inner__header.jarallax
+				img.jarallax-img(src="./images/backgrounds/bg-1.jpg")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							h2.inner__title= `${page_title}`
+			main.inner__content(role="main")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							.inner__card.shadow-sm
+								.card-header
+									img(src="./images/icons/employee.svg", alt="")
+								.card-body
+									.container
+										.row
+											.col-12
+												form(action="#" method="POST")
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#login_input_email_prepend.input-group-text
+																		span.icon-male-user
+																input#login_input_email.form-control.form-control-lg(type='email', placeholder='Email', aria-describedby='login_input_email_prepend')
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#login_input_password_prepend.input-group-text
+																		span.icon-key
+																input#login_input_password.form-control.form-control-lg.border-right-0(type='password', placeholder='Password', aria-describedby='login_input_password_prepend')
+																.input-group-append.show-password
+																	span#login_input_password_append.input-group-text
+																		i.fas.fa-eye
+													.form-row.mb-3
+														.col-6.d-flex.align-items-center
+															.custom-control.custom-checkbox
+																input#login_input_remember_me.custom-control-input(type='checkbox')
+																label.custom-control-label.text-primary.text-capitalize(for='login_input_remember_me') remember me
+														.col-6.d-flex.align-items-center.justify-content-end
+															a.btn.btn-link.p-0.text-capitalize(href="#") forgot password
+													.form-row.mb-3
+														.col-12
+															button.btn.btn-primary.btn-block.btn-lg(type="submit") login
+													.form-row.mb-3
+														.col-4
+															a.btn.btn-facebook.btn-block.btn-lg.font-weight-light.text-capitalize(href="#")
+																span.icon-facebook.mr-4
+																|facebook
+														.col-4
+															a.btn.btn-twitter.btn-block.btn-lg.font-weight-light.text-capitalize(href="#")
+																span.icon-twitter.mr-4
+																|twitter
+														.col-4
+															a.btn.btn-google.btn-block.btn-lg.font-weight-light.text-capitalize.text-red(href="#")
+																span.icon-gmail.mr-4
+																	span.path1
+																	span.path2
+																	span.path3
+																|gmail
+								.card-footer
+									button.btn.btn-link.btn-block(type="button", data-toggle="modal", data-target="#loginAsProvider")
+										span.icon-service
+										|login to add service
+									button.btn.btn-link.btn-block(type="button")
+										span.icon-user
+										| new user
+
+
+block modals
+	#loginAsProvider.modal.animated.fadeIn.fast(role='dialog', aria-hidden='true', aria-labelledby='loginAsProviderLabel', tabindex='-1')
+		.modal-dialog.modal-dialog-centered(role='document')
+			.modal-content
+				.modal-header
+					h6#loginAsProviderLabel.modal-title.text-capitalize Choose service type
+					button.close(data-dismiss='modal', type='button', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body
+					.container
+						.row
+							.col
+								.card-service-icon
+									a(href="registeration-commerce-first.html")
+									.card-body
+										span.icon-online-shop
+										h6.card-title Lorem, ipsum.
+							.col
+								.card-service-icon
+									a(href="registeration-medical-first.html")
+									.card-body
+										span.icon-doctor
+										h6.card-title Lorem, ipsum.
+							.col
+								.card-service-icon
+									a(href="registeration-worker-first.html")
+									.card-body
+										span.icon-worker
+										h6.card-title Lorem, ipsum.
+

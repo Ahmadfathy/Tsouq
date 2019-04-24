@@ -1,0 +1,110 @@
+extends ./layouts/_index_layout.pug
+
+
+block variables
+	- var page_title = "new account";
+	- var page_sub_title = "medical service provider";
+
+
+block content
+	.inner#login-page
+		.inner__wrapper
+			header.inner__header.jarallax
+				img.jarallax-img(src="./images/backgrounds/bg-1.jpg")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							h2.inner__title= `${page_title}`
+			main.inner__content(role="main")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							.inner__card.shadow-sm
+								.card-header
+									h4.text-primary.text-capitalize.font-weight-bold.m-0.pt-3= `${page_sub_title}`
+								.card-body
+									.container
+										.row
+											.col-12
+												form(action="#" method="POST")
+													.form-row.mb-3
+														.col-4
+															a.btn.btn-facebook.btn-block.btn-lg.font-weight-light.text-capitalize(href="#")
+																span.icon-facebook.mr-4
+																|facebook
+														.col-4
+															a.btn.btn-twitter.btn-block.btn-lg.font-weight-light.text-capitalize(href="#")
+																span.icon-twitter.mr-4
+																|twitter
+														.col-4
+															a.btn.btn-google.btn-block.btn-lg.font-weight-light.text-capitalize.text-red(href="#")
+																span.icon-gmail.mr-4
+																	span.path1
+																	span.path2
+																	span.path3
+																|gmail
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_full_name_prepend.input-group-text
+																		span.icon-male-user
+																input#registeration_input_full_name.form-control.form-control-lg(type='text', aria-describedby='registeration_input_full_name_prepend', placeholder='Full Name')
+
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_email_prepend.input-group-text
+																		span.icon-envelope
+																input#registeration_input_email.form-control.form-control-lg(type='email', aria-describedby='registeration_input_email_prepend', placeholder='Email')
+													.form-row.mb-3
+														.col-9
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_phone_number_prepend.input-group-text
+																		span.icon-call-answer
+																input#registeration_input_phone_number.form-control.form-control-lg(type='number', aria-describedby='registeration_input_phone_number_prepend', placeholder="Phone Number")
+														.col-3
+															.input-group
+																input#registeration_input_phone_code.form-control.form-control-lg(type='text', placeholder="+566")
+													.form-row.mb-3
+														.col-6
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_country_prepend.input-group-text
+																		span.icon-maps-pin
+																input#registeration_input_country.form-control.form-control-lg(type='text', aria-describedby='registeration_input_country_prepend', placeholder="Country")
+														.col-6
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_government_prepend.input-group-text
+																		span.icon-maps-pin
+																input#registeration_input_government.form-control.form-control-lg(type='text', aria-describedby='registeration_input_government_prepend', placeholder="Government")
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_city_prepend.input-group-text
+																		span.icon-maps-pin
+																input#registeration_input_city.form-control.form-control-lg(type='text', aria-describedby='registeration_input_city_prepend', placeholder="City")
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_id_prepend.input-group-text
+																		span.icon-maps-pin
+																input#registeration_input_id.form-control.form-control-lg(type='text', aria-describedby='registeration_input_id_prepend', placeholder="ID")
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#lregisteration_input_password_prepend.input-group-text
+																		span.icon-key
+																input#lregisteration_input_password.form-control.form-control-lg.border-right-0(type='password', aria-describedby='lregisteration_input_password_prepend', placeholder='Password')
+																.input-group-append.show-password
+																	span#lregisteration_input_password_append.input-group-text
+																		i.fas.fa-eye
+													.form-row.mb-3
+														.col-12
+															button.btn.btn-primary.btn-block.btn-lg(type="submit") login

@@ -1,0 +1,123 @@
+extends ./layouts/_index_layout.pug
+
+
+block variables
+	- var page_title = "new account";
+	- var page_sub_title = "Registration of a new medical service";
+
+
+block content
+	.inner#login-page
+		.inner__wrapper
+			header.inner__header.jarallax
+				img.jarallax-img(src="./images/backgrounds/bg-1.jpg")
+				.container
+					.row
+						.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+							h2.inner__title= `${page_title}`
+			main.inner__content(role="main")
+				.container
+					.row
+						.col-12.col-sm-12.offset-sm-0.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+							.inner__card.shadow-sm
+								.card-header
+									h4.text-primary.text-capitalize.font-weight-bold.m-0.pt-3= `${page_sub_title}`
+								.card-body
+									.container
+										.row
+											.col-12
+												form.p-4(action="#" method="POST")
+													.form-row.mb-3
+														.col-3
+															.profile-avatar
+																.profile-avatar-preview
+																	img(src="./images/avatars/avatar-default.jpg", alt="profile pic")
+																.profile-avatar-field
+																	input#profile-avatar-input(type="file", name="", data-maxSize="5")
+																	label(for="profile-avatar-input") add new avatar
+														.col-9
+															.form-row.mb-3
+																.col-12
+																	.input-group
+																		.input-group-prepend
+																			span#registeration_input_specialization_prepend.input-group-text
+																				span.icon-medical
+																		input#registeration_input_specialization.form-control.form-control-lg(type="text", aria-describedby="registeration_input_specialization_prepend", placeholder="Specialization")
+															.form-row.mb-3
+																.col-11
+																	.input-group
+																		.input-group-prepend
+																			span#registeration_input_scientific_expertise_prepend.input-group-text
+																				span.icon-medical
+																		input#registeration_input_scientific_expertise.form-control.form-control-lg.badges-input(type="text", name="scientific_expertise[]", aria-describedby="registeration_input_scientific_expertise_prepend", placeholder="Scientific Expertise")
+
+																.col-1.d-flex.align-items-center.justify-content-center
+																	.badges-add-more
+																		i.fas.fa-plus
+																.col-12.badges-container
+													.form-row.mb-3
+														.col-6
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_detection_price_prepend.input-group-text
+																		span.icon-money-bag
+																input#registeration_input_detection_price.form-control.form-control-lg(type='number', aria-describedby='registeration_input_detection_price_prepend', placeholder='Detection price')
+														.col-6
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_price_of_consultation_prepend.input-group-text
+																		span.icon-consultation
+																input#registeration_input_price_of_consultation.form-control.form-control-lg(type='number', aria-describedby='registeration_input_price_of_consultation_prepend', placeholder='Price of consultation')
+													.form-row.mb-3
+														.col-12
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_address_prepend.input-group-text
+																		span.icon-maps-pin
+																input#registeration_input_address.form-control.form-control-lg.location-search(type="text", aria-describedby="registeration_input_address_prepend", placeholder="Address")
+													.form-row.mb-3
+														.col-11
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_times_of_work_prepend.input-group-text
+																		span.icon-calendar
+																input#registeration_input_times_of_work.form-control.form-control-lg.times-of-work.badges-input(type="text", name="times_of_work[]" aria-describedby="registeration_input_times_of_work_prepend", placeholder="Times Of Works")
+
+														.col-1.d-flex.align-items-center.justify-content-center
+															.badges-add-more
+																i.fas.fa-plus
+														.col-12.badges-container
+													.form-row.mb-3
+														.col-10
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_phone_number_prepend_1.input-group-text
+																		span.icon-call-answer
+																input#registeration_input_phone_number_1.form-control.form-control-lg(type='number', aria-describedby='registeration_input_phone_number_prepend_1', placeholder="Phone Number")
+														.col-2
+															.input-group
+																input#registeration_input_phone_code_1.form-control.form-control-lg(type='text', placeholder="+566")
+													.form-row.mb-3
+														.col-10
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_phone_number_prepend_2.input-group-text
+																		span.icon-call-answer
+																input#registeration_input_phone_number_2.form-control.form-control-lg(type='number', aria-describedby='registeration_input_phone_number_prepend_2', placeholder="Phone Number")
+														.col-2
+															.input-group
+																input#registeration_input_phone_code_2.form-control.form-control-lg(type='text', placeholder="+566")
+													.form-row.mb-3
+														.col-10
+															.input-group
+																.input-group-prepend
+																	span#registeration_input_phone_number_prepend_3.input-group-text
+																		span.icon-call-answer
+																input#registeration_input_phone_number_3.form-control.form-control-lg(type='number', aria-describedby='registeration_input_phone_number_prepend_3', placeholder="Phone Number")
+														.col-2
+															.input-group
+																input#registeration_input_phone_code_3.form-control.form-control-lg(type='text', placeholder="+566")
+
+													.form-row.mb-3
+														.col-12
+															button.btn.btn-primary.btn-block.btn-lg(type="submit") submit
